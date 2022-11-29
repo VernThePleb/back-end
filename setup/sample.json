@@ -1,0 +1,24 @@
+{
+    "name": "Jack Doe",
+    "age": 99,
+    "gender": "Non-Binary",
+    "activityLevel": "very active",
+    "typeOfSport": "swordfighting",
+    "objects": {
+        "0": {
+            "ID": 0,
+            "value": 13,
+            "date": "2022-10-31T09:00:00.594Z",
+            "composition": {
+                "heartRate": 0,
+                "maxHR": 0,
+                "variableHR": 0,
+                "RestHR": 0,
+                "HRzones": 0,
+                "sleepTime": 0,
+                "RPEsurvey": 0,
+                "MentalHealthSurvey": 0
+            }
+        }
+    }
+}
