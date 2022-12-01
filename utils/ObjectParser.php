@@ -63,10 +63,10 @@ final class ObjectParser
         $dataArray[$value->ID] = json_decode(json_encode($value), true);
         $dataObject->objects = json_decode(json_encode($dataArray));
         file_put_contents(FILE_PATH, json_encode($dataObject));
-        $this->dataObject = $dataObject; 
+        $this->dataObject = $dataObject;  
     }
-
-    private function checkUpdateSuccess(mixed $key, mixed $value): bool
+	// IMPLEMENT CHECKUPDATESUCCESS FUNCTIONALITY FOR `$this->updateDataWithObject((object) $value);`
+	private function checkUpdateSuccess(mixed $key, mixed $value): bool
     {
         $data = file_get_contents(FILE_PATH);
         $dataArray = json_decode($data, true);

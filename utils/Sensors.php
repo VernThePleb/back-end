@@ -1,9 +1,8 @@
 <?php declare(strict_types=1);
 
 namespace utils;
-#mocking data:
-#note to self: HRzones are simply meant to give coaches holdon; values are percentages of HRMax;
-#maxHR = 220-ageOfAthlete;
+#implement functionality for HRZones and variable heartrate with time in
+# each zone
 final class Sensors
 {
     private array $ranges;
@@ -11,7 +10,7 @@ final class Sensors
     private array $HRzones;
 
     private int $time;
-    function __construct(int $age, int $timeInHRzones)
+    function __construct(int $age, object $timeInHRzones)
     {
         $this->ranges = [
             "heartRate" => [
@@ -53,7 +52,8 @@ final class Sensors
                 "min" => 6
             ]    
         ];
-        $this->time = $timeInHRzones;
+        $this->HRzones = generateHRzones();
+        $this->timeInHrZones = generateTimeInHrZones();
     }
 
     public function getData(): array
@@ -84,6 +84,11 @@ final class Sensors
         
         return $arr;
     }
+    
+    private function generateTimeInHrZones(): object;
+    {
+		
+	}
 
     private function calculateHRZones(): float
     {
